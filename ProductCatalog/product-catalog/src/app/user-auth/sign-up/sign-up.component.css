@@ -1,0 +1,65 @@
+body{
+    background-color:rgb(234, 229, 229) ;
+   
+}
+
+.header{
+ background-color:  rgb(151, 140, 140);
+ height: 80px;
+ display: flex;
+ flex-direction: row;
+}
+
+h1{
+    display: flex;
+    flex-direction: row;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 18px 0 0 30px;
+    
+}
+.button{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-left: 800px;
+    margin-bottom: 15px;
+}
+.login{
+    margin-left: 12px;
+}
+
+.container{
+    margin: 40px 0 50px 400px;
+    background-color: rgb(151, 140, 140);
+    border: 1px solid white;
+    height: max-content;
+    width: 600px;
+}
+
+h3{
+   text-align: center;
+   margin-top: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+}
+input{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 33rem;
+    margin-top: 10px;
+}
+label{
+    color: black;
+    margin-top: 10px;
+    font-size: large;
+}
+.formreg{
+    margin: 10px 0 0 20px;
+}
+
+.btn{
+    margin: 19px 0 0 0;
+    width: 33rem;
+}

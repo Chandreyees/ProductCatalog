@@ -1,0 +1,13 @@
+<div class="container">
+    <h3>Login</h3>
+
+    <span style="color: rgb(215, 27, 27);">{{err}}</span>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        
+        <label for="email">Email</label>
+        <input type="email" required pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" placeholder="Enter your mail id" formControlName="email" name="email">
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter your password" formControlName="password" name="password">
+        <button type="submit" (click)="onSubmit()" class="submitbtn btn btn-outline-light">Submit</button>
+    </form>
+</div>

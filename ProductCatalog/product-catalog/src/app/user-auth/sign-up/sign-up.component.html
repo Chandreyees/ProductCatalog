@@ -1,0 +1,17 @@
+<div class="container">
+    <h3>Register</h3>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <label for="name">Name</label>
+        <input type="text" placeholder="Enter your name" name="name" formControlName="name">
+        <label for="email">Email</label>
+        <input type="email" placeholder="Enter your mail id" formControlName="email" name="email">
+        <span style="color: white;">{{err}}</span>
+        <br>
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter your password">
+        <label for="password">Confirm Password</label>
+        <input type="password" placeholder="Enter your password" formControlName="password" name="password">
+        <button type="submit" class="submitbtn btn btn-outline-dark">Submit</button>
+    </form>
+    <p>Already a member? <a role="button" (click)="onLogin()">Log in</a></p>
+</div>

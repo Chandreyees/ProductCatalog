@@ -1,0 +1,32 @@
+
+h2{
+   
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+   
+    
+}
+
+.linkitems{
+    position: relative;
+    left: 55rem;
+}
+
+.middle-part{
+    margin: 200px 0 0 400px ;
+}
+.searchinput{
+    width: 20rem;
+    height: 40px;
+    padding: 20px;
+}
+
+.searchbtn{
+    margin-bottom: 5px;
+}
+
+form{
+    margin-bottom: 2rem;
+}
+
+

@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #b8868e;">
+    <div class="container-fluid">
+      <h2 class="headingName">Product Catalog</h2>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav linkitems">
+          <li><a class="nav-link active" role="button" (click)="onLogin()">Login</a></li>
+           <li> <a class="nav-link active" role="button" (click)="onRegister()">Register</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+
+<div class="container">
+    <div class="row">
+      <div *ngIf="products.length===0">
+       <h3 style="font-family: Arial, Helvetica, sans-serif;text-align: center;margin-top: 10rem;">
+        Sorry, No products as per choice found!!!</h3>
+        <a routerLink="/" class="btn btn-dark" style="margin-left: 22rem;margin-top: 2rem;">Take me home</a>
+      
+      </div>
+        <ng-container *ngFor="let item of products">
+            <div class="card col-md-3">
+                <img src="{{item.imageUrl}}" alt="" width="100%">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.name}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.brandName}}</p>
+                <!-- <p><strong>Price:</strong> ${{item.price}}</p> -->
+                <button class="btn btn-primary" (click)=viewDetails()>View Details</button>
+            </div>
+        </ng-container>
+
+    </div>
+</div>

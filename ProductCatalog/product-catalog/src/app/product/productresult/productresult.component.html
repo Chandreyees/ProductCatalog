@@ -1,0 +1,53 @@
+<app-nav></app-nav>
+
+<div class="filterProducts">
+    <form [formGroup]="searchPriceForm" (ngSubmit)="onSubmitPrice()">
+        <div class="form-outline mb-2">
+            <h5 style="margin-top: 10px;">Filter Price</h5>
+            <select class="form-select" [(ngModel)]="Price" formControlName="Price" style="width: 30rem;">
+                <option selected value="">Filter by price</option>
+                <option value="1000-2000">₹1000-₹2000</option>
+                <option value="3000-6000">₹3000-₹6000</option>
+                <option value="6000-9000">₹6000-₹9000</option>
+              </select>
+        </div>
+       
+    </form>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div *ngIf="products.length===0">
+            <h3 style="font-family: Arial, Helvetica, sans-serif;text-align: center;margin-top: 10rem;">
+                Sorry, No products as per choice found!!!</h3>
+                <a routerLink="/" class="btn btn-dark" style="margin-left: 22rem;margin-top: 2rem;">Take me home</a>
+              
+        </div>
+        <!-- <div *ngIf="products.length===0 && !isEmptyObj(productObject) && random.length!=0">
+            <div class="card col-md-3">
+                    <img src="{{productObject.imageUrl}}" alt="">
+                    <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{productObject.name}}</h5>
+                    <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{productObject.brandName}}</p>
+                    <p><strong>Price:</strong> ${{productObject.price}}</p> 
+                    <button class="btn btn-primary" (click)="viewDetails(productObject.id)">View Details</button>
+                </div>
+            
+        </div>
+             -->
+                <ng-container *ngFor="let item of products | filterPrice:Price">
+                    <div class="card col-md-3">
+                        <img src="{{item.imageUrl}}" alt="">
+                        <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.name}}</h5>
+                        <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.brandName}}</p>
+                        <p><strong>Price:</strong> ₹{{item.price}}</p> 
+                        <button class="btn btn-primary" (click)="viewDetails(item.id)">View Details</button>
+                    </div>
+                </ng-container>
+           
+          
+      
+
+    </div>
+</div>
+
+

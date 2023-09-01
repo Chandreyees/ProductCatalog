@@ -1,0 +1,51 @@
+
+h2{
+   
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+   
+    
+}
+
+.linkitems{
+    position: relative;
+    left: 55rem;
+}
+
+
+
+.item img {
+    width: 64px;
+}
+
+.item {
+    margin: 0px 15px;
+    text-align: center;
+}
+
+.item a:hover {
+    color: blue;
+}
+
+.card {
+    padding: 8px;
+    margin: 40px;
+}
+
+.card img {
+    width: 160px;
+    height: 170px;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.card img:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #b8868e !important;
+    color: black !important;
+}
+
